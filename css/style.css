@@ -7,9 +7,12 @@
 
 /* General Styles */
 body {
-  font-family: 'Roboto', sans-serif;
-  background: #fff;  /* fallback for old browsers */
-  transition: background-color 0.3s ease, color 0.3s ease;
+   font-family: 'arwa';
+   font-family: 'shekari';
+   background: url('img/bs.png') no-repeat center center fixed;
+   transition: background-color 0.3s ease, color 0.3s ease;
+   background-size: 400px 400px;
+   background-color: #FFFFFF;
 }
 
 /* Dark Mode Styles */
@@ -153,13 +156,7 @@ ul {
   margin-left: 2rem;
 }
 
-/* Footer Styles */
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-}
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
