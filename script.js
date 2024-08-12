@@ -12,6 +12,8 @@ function toggleDarkMode() {
   document.body.classList.toggle('dark-mode');
 }
 
+
+
 // Initially show the 'About' section
 document.addEventListener('DOMContentLoaded', function() {
   showSection('about');
