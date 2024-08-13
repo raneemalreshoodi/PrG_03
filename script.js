@@ -8,10 +8,6 @@ function showSection(sectionId) {
   document.getElementById(sectionId).style.display = 'block';
 }
 
-function toggleDarkMode() {
-  document.body.classList.toggle('dark-mode');
-}
-
 document.addEventListener('DOMContentLoaded', function() {
   showSection('about');
 });
