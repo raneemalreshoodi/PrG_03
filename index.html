@@ -1,66 +1,292 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html dir="rtl" lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="https://www.fontstatic.com/f=arwa,shekari" />
-
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>بانوراما القصيم</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="icon" type="image/png" href="./img/Logo.png">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul class="nav-links">
-        <li><input type="checkbox" class="dark-mode-toggle" onclick="toggleDarkMode()"></li>
-        <li><a href="#" onclick="showSection('contact')">تواصل معنا</a></li>
-        <li><a href="#" onclick="showSection('clients')">عملائنا</a></li>
-        <li><a href="#" onclick="showSection('services')">خدماتنا</a></li>
-        <li><a href="#" onclick="showSection('about')">من نحن</a></li>
-      </ul>
-    </nav>
-     <div class="logo">
-      <img src="img/logo.png" alt="logo" />
-  </header>
-<img src="img/bs.png" alt="bg" />
-  <main>
-    <section id="about">
-        <div class="meteor"></div>
-      <h2>من نحن</h2>
-      <p>نحن شركة متخصصة في تقديم خدمات متنوعة لعملائنا. نسعى دائمًا لتقديم أفضل الحلول المناسبة لاحتياجاتهم.</p>
-    </section>
+  <div id="main">
+    <div class="container">
+      <nav>
+        <img src="./img/logo.png" alt="logo" class="logo" width="50">
+        <ul class="nav-list">
+          <li><a href="#contact">تواصل معنا</a></li>
+          <li><a href="#clients">عملائنا</a></li>
+          <li><a href="#services">خدماتنا</a></li>
+          <li><a href="#aboutus">من نحن</a></li>
+          <input type="checkbox" class="toggleDarkMode" onclick="toggleDarkMode()">
+        </ul>
+        <img src="./img/menu.png" alt="menu" class="menu-btn">
+      </nav>
+      <div class="main-content">
+        <h1 class="intro-heading">بانوراما القصيم للبرمجة والتصميم</h1>
+        <h1 class="main-heading">نقدم لعملائنا أفضل الحلول والخدمات الرقميـة المتكاملة</h1>
+      </div>
+    </div>
+  </div>
 
-    <section id="services">
-      <h2>خدماتنا</h2>
-      <ul>
-        <li>تصميم مواقع الويب</li>
-        <li>تطوير تطبيقات الجوال</li>
-        <li>خدمات التسويق الرقمي</li>
-        <li>استشارات تقنية</li>
-      </ul>
-    </section>
+  <section id="clients">
+    <div class="container">
+      <div class="section-title1">
+        <h1>عملائنا</h1>
+        <div class="line1"></div>
+      </div>
+      <div class="slideshow-container">
+<div class="mySlides fade">
+  <img src="img/cl1.jpg" style="width:100%">
+</div>
 
-    <section id="clients">
-      <h2>عملائنا</h2>
-      <p>نفخر بالعمل مع مجموعة متنوعة من العملاء، من الشركات الصغيرة إلى المؤسسات الكبرى.</p>
-    </section>
+<div class="mySlides fade">
+  <img src="img/cl2.jpg" style="width:100%">
+</div>
 
-    <section id="contact">
+<div class="mySlides fade">
+  <img src="img/cl3.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="img/cl4.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="img/cl5.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="img/cl6.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="img/cl7.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="img/cl8.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="img/cl9.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="img/cl10.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="img/cl11.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="img/cl12.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="img/cl13.jpg" style="width:100%">
+</div> 
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  <span class="dot" onclick="currentSlide(6)"></span> 
+  <span class="dot" onclick="currentSlide(7)"></span> 
+  <span class="dot" onclick="currentSlide(8)"></span> 
+  <span class="dot" onclick="currentSlide(9)"></span> 
+  <span class="dot" onclick="currentSlide(10)"></span> 
+  <span class="dot" onclick="currentSlide(11)"></span> 
+  <span class="dot" onclick="currentSlide(12)"></span> 
+  <span class="dot" onclick="currentSlide(13)"></span> 
+</div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-title">
+        <h1>خدماتنا</h1>
+        <div class="line"></div>
+      </div>
+      <div class="services">
+        <div class="service">
+          <img src="./img/service1.jpg" alt="service1">
+          <h3>البرمجة من الصفر</h3>
+          <p>نقوم بتحويل فكرتك إلى موقع إلكتروني او تطبيق جوال مع سكريبت مبرمج من الصفر</p>
+        </div>
+        <div class="service">
+          <img src="./img/service2.jpg" alt="service2">
+          <h3>سكريبت الجمعيات الخيرية</h3>
+          <p>سكريبت متكامل لمواقع الجمعيات الخيريه وفق ضوابط المركز السعودي للحوكمة
+        </div>
+        <div class="service">
+          <img src="./img/service3.jpg" alt="service3">
+          <h3>برنامج قمة للنداء الآلي</h3>
+          <p>هو نظام تبليغ عن الحالات الطارئه للمنشآت الصحية أو غيرها من الأماكن التي تحتاج سرعة إستجابة يتم النداء عن طريق:</p>
+          <li>السماعات الداخلية للمنشأة</li>
+          <li> الإتصال المباشر بالفريق المناوب</li>
+          <li>الرسائل النصية</li>
+         <br>مع إماكنية التعديل الكامل في شفرات نداء الطوارئ</p>
+        </div>
+        <div class="service">
+          <img src="./img/service4.jpg" alt="service4">
+          <h3>برنامج قمة لنقاط البيع</h3>
+          <p>
+            <li>لا يحتاج جــــــهاز بمواصفات عاليه</li>
+            <li>يعمل على الجوال</li>
+            <li> قاعدة بيانات محمية مرفوعة على الشبكة</li>
+            <li>نسخ احتياطي كل 24 ساعه</li>
+          </p>
+        </div>
+        <div class="service">
+          <img src="./img/service5.jpg" alt="service5">
+          <h3>منصة بانوراما المتكاملة للاندية الرياضيه</h3>
+          <p>تقدم بانوراما القصيم للبرمجة منصة متكاملة لادارة الانديه الرياضيه تشتمل على الآتي:
+            <li>موقع الكتروني</li>
+            <li>تطبيقين جوال للموقع ايفون و اندرويد</li>
+            <li>متجر الكتروني</li>
+            <li>نظام المراسلات الالكترونيه</li>
+            <li>منصة تذاكر</li>            
+          </p>
+        </div>
+        <div class="service">
+          <img src="./img/service6.jpg" alt="service6">
+          <h3>نظام قمة للمحاسبة</h3>
+          <p>هو نظام يمكن مكاتب المحاسبه من ادارة جميع اعمالها مثل:
+            <li>الحسابات</li>
+            <li>القيود اليوميه</li>
+            <li>ميزان المراجعه</li>
+            <li>القوائم الماليه</li>
+           <br> وغيرها من المهام المحاسبيه</p>
+        </div>
+        <div class="service">
+          <img src="./img/service7.jpg" alt="service7">
+          <h3>نظام قمة للمحاماه</h3>
+          <p>هو نظام يمكن مكاتب المحاماه من ادارة جميع اعمالها مثل:
+            <li> تقديم الدعاوي</li>
+            <li>ادراة المحاميين و توكيل القضايا لهم</li>
+            <li>خط سير لمتابعة كل قضيه</li>
+          </p>
+        </div>
+        <div class="service">
+          <img src="./img/service8.jpg" alt="service8">
+          <h3>منصة بانوراما لإدارة المشاريع الهندسية</h3>
+          <p>تقدم بانوراما القصيم للبرمجه منصة متكاملة لإدارة المكاتب الهندسيه الكبيره تشتمل على الآتي:
+            <li>خط سير كامل للمشاريع الهندسية بكامل تفاصيلها</li>
+            <li> ادارة الموظفين و اجازاتهم و رواتبهم واقاماتهم</li>
+            <li>نظام اشعارات مخصص لكل بند من البنود اعلاه</li> 
+            <li>ادارة السجلات و تراخيص المحلات</li>
+            <li>ادارة الموادر البشريه</li>
+            <li>ادارة متكامله لسيارات المكتب الهندسي</li>  
+          </p>
+        </div> 
+      </div>
+  </section>
+
+  <section id="aboutus">
+    <div class="container">
+      <div class="aboutus-content">
+        <h1>من نحن</h1>
+        <h3>إيمانًا منا بأهمية البرمجة و العالم الرقمي في حياتنا كنا نحن بانوراما القصيم، من الرواد في هذه المجالاتي التي تسعى للارتقاء بمجال التصميم والبرمجة لتكون من كبرى الصروح بالمملكة والشرق الأوسط في تصميم وبرمجة المواقع وتطبيقات الجوال والبرامج الإدارية والمحاسبية </h3>
+        <h4>نهدف دائمًا لإرضاء كافة العملاء لدينا من خلال تقديم مجموعة من الخدمات المميزة. نسعى لخلق وتنمية جسور التعاون والشراكة وتبادل الخبرات بين المبرمجين في مختلف تخصصاتهم، ونستهدف إعداد برامج متميزة تلبي الاحتياجات الحقيقية للمجتمع وسوق العمل مع تطويرها المستمر. ندرب المبرمجين حديثي التخرج لنرتقي بـالمستويات المهارية في جميع مجالات البرمجة من الأنشطة الأساسية لخدمة المجتمع المدني</h4>
+        <p>رسالتنا هي خلق مجتمع واعِ فكريًا و متطور علميًا، قادرًا على مواكبة العالم الرقمي بأسهل الطرق وأبسطها</p>
+       <button class="btn btn-primary" ><a href="#contact">تواصل معنا</a></button>  
+     </div>
+     <div class="aboutus-img">
+   <img src="./img/logo.png" alt="logo" width="50">
+  </div>
+</div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
       <h2>تواصل معنا</h2>
-      <form>
-        <label for="name">الاسم:</label>
-        <input type="text" id="name" name="name" required>
+      <div class="form-card1">
+  <div class="form-card2">
+    <form class="form">
+      <p class="form-heading"> تواصل معنا</p>
 
-        <label for="email">البريد الإلكتروني:</label>
-        <input type="email" id="email" name="email" required>
+      <div class="form-field">
+        <input required="" placeholder="الاسم" class="input-field" type="text" />
+      </div>
 
-        <label for="message">الرسالة:</label>
-        <textarea id="message" name="message" required></textarea>
+      <div class="form-field">
+        <input
+          required=""
+          placeholder="ايميلك"
+          class="input-field"
+          type="email"
+        />
+      </div>
 
-        <button type="submit">إرسال</button>
-      </form>
+      <div class="form-field">
+        <input
+          required=""
+          placeholder="العنوان"
+          class="input-field"
+          type="text"
+        />
+      </div>
+
+      <div class="form-field">
+        <textarea
+          required=""
+          placeholder="الرسالة"
+          cols="30"
+          rows="3"
+          class="input-field"
+        ></textarea>
+      </div>
+
+      <button class="sendMessage-btn">ارسال</button>
+    </form>
+  </div>
+</div>
+
     </section>
   </main>
-  <script src="script.js"></script>
+ <footer class="footer">
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+    <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a></li>
+    </ul>
+    <p>© تم التصميم بواسطة بانوراما القصيم للبرمجة والتصميم.
+    </p>
+  </footer>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="script.js"></script>
+<script>
+  const navBtn = document.querySelector('menu-btn');
+  const navlist = document.querySelector('nav-list');
+  navBtn.addEventListener("click", function () {
+    navList.classList.toggle("active");
+  });
+</script>
+
 </body>
 </html>
