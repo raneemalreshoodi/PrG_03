@@ -17,7 +17,7 @@ header {
     align-items: center;
 }
 
-header .logo h1 {
+header .logo  {
     margin: 0;
 }
 
@@ -30,7 +30,7 @@ header nav ul {
 }
 
 header nav ul li {
-display: inline;
+    display: inline;
     margin: 0 15px;    
 }
 
@@ -41,7 +41,8 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    color: #ffcc00;
 }
 
 .intro {
@@ -269,4 +270,11 @@ footer {
   width: 100%;
   padding: 10px 30px;
   border-bottom: 1px solid var(--white);
+}
+header nav ul li a {
+    font-size: 13px;
+}
+.logo{
+    width: 30px;
+}
 }
