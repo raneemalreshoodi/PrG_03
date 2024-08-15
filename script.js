@@ -1,40 +1,38 @@
-function showSection(sectionId) {
-  // Hide all sections
-  document.querySelectorAll('main > section').forEach(section => {
-    section.style.display = 'none';
-  });
+let currentSlideClients = 0;
+let currentSlideServices = 0;
 
-  // Show the selected section
-  document.getElementById(sectionId).style.display = 'block';
+function changeSlide(direction, sliderType) {
+    let slides;
+    let currentSlide;
+
+    if (sliderType === 'clients') {
+        slides = document.querySelectorAll('#clients .slide');
+        currentSlide = currentSlideClients;
+    } else if (sliderType === 'services') {
+        slides = document.querySelectorAll('#services .slide');
+        currentSlide = currentSlideServices;
+    }
+
+    currentSlide += direction;
+
+    if (currentSlide < 0) {
+        currentSlide = slides.length - 1;
+    } else if (currentSlide >= slides.length) {
+        currentSlide = 0;
+    }
+
+    document.querySelector(`#${sliderType} .slides`).style.transform = `translateX(-${currentSlide * 100}%)`;
+
+    if (sliderType === 'clients') {
+        currentSlideClients = currentSlide;
+    } else if (sliderType === 'services') {
+        currentSlideServices = currentSlide;
+    }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  showSection('about');
+// Smooth scroll for "من نحن" link
+document.querySelector('a[href="#about"]').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
 });
 
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
