@@ -21,7 +21,7 @@ function changeSlide(direction, sliderType) {
         currentSlide = 0;
     }
 
-    document.querySelector(`#${sliderType} .slides`).style.transform = `translateX(-${currentSlide * 100}%)`;
+    document.querySelector(#${sliderType} .slides).style.transform = translateX(-${currentSlide * 100}%);
 
     if (sliderType === 'clients') {
         currentSlideClients = currentSlide;
@@ -33,6 +33,5 @@ function changeSlide(direction, sliderType) {
 // Smooth scroll for "من نحن" link
 document.querySelector('a[href="#about"]').addEventListener('click', function(event) {
     event.preventDefault();
-    document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
+    document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
 });
-
