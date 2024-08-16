@@ -1,20 +1,37 @@
-function showSection(sectionId) {
-  // Hide all sections
-  document.querySelectorAll('main > section').forEach(section => {
-    section.style.display = 'none';
-  });
+let currentSlideClients = 0;
+let currentSlideServices = 0;
 
-  // Show the selected section
-  document.getElementById(sectionId).style.display = 'block';
+function changeSlide(direction, sliderType) {
+    let slides;
+    let currentSlide;
+
+    if (sliderType === 'clients') {
+        slides = document.querySelectorAll('#clients .slide');
+        currentSlide = currentSlideClients;
+    } else if (sliderType === 'services') {
+        slides = document.querySelectorAll('#services .slide');
+        currentSlide = currentSlideServices;
+    }
+
+    currentSlide += direction;
+
+    if (currentSlide < 0) {
+        currentSlide = slides.length - 1;
+    } else if (currentSlide >= slides.length) {
+        currentSlide = 0;
+    }
+
+    document.querySelector(#${sliderType} .slides).style.transform = translateX(-${currentSlide * 100}%);
+
+    if (sliderType === 'clients') {
+        currentSlideClients = currentSlide;
+    } else if (sliderType === 'services') {
+        currentSlideServices = currentSlide;
+    }
 }
 
-function toggleDarkMode() {
-  document.body.classList.toggle('dark-mode');
-}
-
-
-
-// Initially show the 'About' section
-document.addEventListener('DOMContentLoaded', function() {
-  showSection('about');
+// Smooth scroll for "من نحن" link
+document.querySelector('a[href="#about"]').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
 });
