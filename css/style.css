@@ -1,24 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Fustat:wght@200..800&display=swap');
 
-/* General Styles */
+
 body {
-    font-family: "Fustat", sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    background-color: #f9f9f9;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    font-family: "Fustat", sans-serif;
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
 }
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 30px 20px;
+    padding: 25px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 header .logo  {
-    margin: 0;
+    margin: 4px;
 }
 
 header nav ul {
@@ -42,13 +40,12 @@ header nav ul li a {
 
 header nav ul li a:hover {
     text-decoration: none;
-    color: #ffcc00;
+    color: #302b63;
 }
 
 .intro {
-    background-color: #ffcc00;
-    color: #333;
-    padding: 100px 0;
+    color: #fff;
+    padding: 120px 0;
 }
 
 .intro h1 {
@@ -63,11 +60,10 @@ header nav ul li a:hover {
     text-align: center;
 }
 
-.about {
-    background-color: #ffcc00;
-    color: #333;
-    padding: 100px 0;
-
+.about {  
+    color: #fff;
+    padding: 100px;
+    background-color: #302b63;
 }
 
 .about h1 {
@@ -76,14 +72,15 @@ header nav ul li a:hover {
     margin-top: 3px;
 }
 .about p {
+    direction: rtl;
     font-size: 20px;
     text-align: center;
 }
 /* Slider Styles */
 .slider {
     position: relative;
-    max-width: 100%;
-    margin: 20px auto;
+    max-width: 70%;
+    margin: 0 auto;
     overflow: hidden;
 }
 
@@ -98,7 +95,6 @@ header nav ul li a:hover {
 
 .slide {
     min-width: 100%;
-    box-sizing: border-box;
     position: relative;
 }
 
@@ -108,10 +104,10 @@ header nav ul li a:hover {
 }
 
 .slide-content {
-    position: absolute;
+    position: flex;
     bottom: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #302b63;
     color: white;
     text-align: center;
     padding: 10px;
@@ -123,7 +119,7 @@ button.prev, button.next {
     top: 50%;
     width: 40px;
     height: 40px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(48, 43, 99, 0.5);
     color: white;
     border: none;
     cursor: pointer;
@@ -140,6 +136,12 @@ button.next {
 }
 
 /* Contact Form Styles */
+.contact , .services , .clients{
+    color: #fff;
+    background-color: transparent;
+    text-align: center;
+    tab-size: 30px;
+}
 .form {
   display: flex;
   flex-direction: column;
@@ -148,16 +150,15 @@ button.next {
   gap: 10px;
   padding-inline: 2em;
   padding-bottom: 0.4em;
-  background-color: #171717;
-  //background-color: #0a192f;
+  background-color: #0f0c29;
   border-radius: 20px;
 }
 
 .form-heading {
   text-align: center;
   margin: 2em;
-  color: #64ffda;
-  font-size: 1.2em;
+  color: #fff;
+  font-size: 30px;
   background-color: transparent;
   align-self: center;
 }
@@ -166,13 +167,13 @@ button.next {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5em;
+  gap: 16px;
   border-radius: 10px;
   padding: 0.6em;
   border: none;
   outline: none;
   color: white;
-  background-color: #171717;
+  background-color: #0f0c29;
   box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
 }
 
@@ -181,7 +182,7 @@ button.next {
   border: none;
   outline: none;
   width: 100%;
-  color: #ccd6f6;
+  color: #fff;
   padding-inline: 1em;
 }
 
@@ -193,28 +194,28 @@ button.next {
   border: none;
   outline: none;
   background-color: transparent;
-  color: #64ffda;
+  color: #fff;
   font-weight: bold;
-  outline: 1px solid #adad85;
+  outline: 1px solid #fff;
   transition: all ease-in-out 0.3s;
 }
 
 .sendMessage-btn:hover {
   transition: all ease-in-out 0.3s;
-  background-color: #64ffda;
-  color: #000;
+  background-color: #0f0c29;
+  color: #302b63;
   cursor: pointer;
   box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
 }
 
 .form-card1 {
-  background-image: linear-gradient(163deg, #adad85 0%, #adad85 100%);
-  border-radius: 22px;
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-radius: 20px;
   transition: all 0.3s;
 }
 
 .form-card1:hover {
-  box-shadow: 0px 0px 30px 1px rgb(173, 173, 133);
+  box-shadow: 0px 0px 20px 1px #302b63;
 }
 
 .form-card2 {
@@ -227,14 +228,15 @@ button.next {
   border-radius: 20px;
 }
 
-/* Footer Styles */
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 15px;
-    text-align: center;
-}
 
+footer {
+    background: #0f0c29;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 100%; /* Extend footer background across the entire page width */
+    margin: 0; /* Remove any auto margins */
+}
 .social-icons {
     margin-top: 10px;
 }
@@ -245,36 +247,28 @@ footer {
     text-decoration: none;
     font-size: 24px;
 }
+.copyright a:hover {
+    color: #302b63;
+} 
 
 .social-icons a:hover {
-    color: #ffcc00;
+    color: #302b63;
 }
-@media screen and (max-width: 520px) {
-  
-  .header{
-    flex-direction: column;
-    background: transparent;
-    position: absolute;
-    top: 0;
-    right: -900px;
-    width: 80%;
-    height: 100vh;
-    padding-top: 80px;
-    transition: all 0.3s ease;
-  }
-  .header{
-    right: 0;
-  }
-  .header ul li{
-  text-align: right;
-  width: 100%;
-  padding: 10px 30px;
-  border-bottom: 1px solid var(--white);
-}
-header nav ul li a {
-    font-size: 13px;
-}
-.logo{
-    width: 30px;
-}
+
+@media screen and (max-width: 600px) {
+    header nav ul li a {
+        font-size: 13px;
+    }
+    .logo {
+        width: 30px;
+    }
+    .about h1 {
+        font-size: 20px;
+        text-align: center;
+        margin-top: 3px;
+    }
+    .about p {
+        font-size: 15px;
+        text-align: center;
+    }
 }
