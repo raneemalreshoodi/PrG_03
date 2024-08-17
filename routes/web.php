@@ -3,10 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ServicesController;
-Route::resource('services', ServicesController::class ,'Service');
-
-
-
+use App\Http\Controllers\ClientController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,26 +33,28 @@ Route::get('/contact',function(){
 
 });
 Route::post('/sendcon', [ContactController::class, 'contact']);
-
-
-Route::get('/content',function(){
-    return view('content');
-
-});
-Route::get('/footer',function(){
-    return view('footer');
-
-});
-Route::get('/insert',function(){
-    return view('input');
-
-});
-// Route::get('/about',function(){
-//     return view('about');
-
-//  });
 // Route::get('/clients',function(){
 //     return view('clients');
 
 // });
+// Route::get('/create', [ClientsController::class, 'create']);
+// Route::resource('clients', ClientController::class);
+// Route::get('/content',function(){
+//     return view('content');
+
+// });
+Route::get('/footer',function(){
+    return view('footer');
+
+});
+
+// Route::get('/insert',function(){
+//     return view('input');
+
+// });
+// Route::get('/about',function(){
+//     return view('about');
+
+//  });
+
 

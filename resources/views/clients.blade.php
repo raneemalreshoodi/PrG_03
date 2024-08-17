@@ -1,4 +1,3 @@
-
 <section id="clients">
         <div class="clients">
         <h2>عملائنا</h2>
