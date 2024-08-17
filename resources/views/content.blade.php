@@ -1,4 +1,3 @@
-<h1>@yield('con')</h1>
 <section id="content">
     <div class="intro">
         <h1>بانوراما القصيم للبرمجة والتصميم</h1>

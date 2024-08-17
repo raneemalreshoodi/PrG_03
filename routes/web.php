@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ServicesController;
+Route::resource('services', ServicesController::class ,'Service');
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -20,22 +25,17 @@ Route::get('/header',function(){
     return view('header');
 
 });
-// Route::get('/about',function(){
-//     return view('about');
-
-//  });
-// Route::get('/clients',function(){
-//     return view('clients');
-
-// });
 // Route::get('/services',function(){
 //     return view('services');
 
 // });
-// Route::get('/contact',function(){
-//     return view('contact');
+// Route::post('/sendser', [ServicesController::class, 'services']);
 
-// });
+Route::get('/contact',function(){
+    return view('contact');
+
+});
+Route::post('/sendcon', [ContactController::class, 'contact']);
 
 
 Route::get('/content',function(){
@@ -46,3 +46,16 @@ Route::get('/footer',function(){
     return view('footer');
 
 });
+Route::get('/insert',function(){
+    return view('input');
+
+});
+// Route::get('/about',function(){
+//     return view('about');
+
+//  });
+// Route::get('/clients',function(){
+//     return view('clients');
+
+// });
+

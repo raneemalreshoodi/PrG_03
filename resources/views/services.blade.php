@@ -1,7 +1,7 @@
 <section id="services">
         <div class="services">
         <h2>خدماتنا</h2>
-        <div class="slider">
+        <div cserviceslass="slider">
             <div class="slides">
                 <!-- Slides for Services -->
                 <div class="slide">
@@ -160,6 +160,7 @@
             </div>
             <button class="prev" onclick="changeSlide(-1, 'services')">&#10094;</button>
             <button class="next" onclick="changeSlide(1, 'services')">&#10095;</button>
-        </div>
-    </div>
+       </div> 
+    </div> 
+</div> 
     </section>
