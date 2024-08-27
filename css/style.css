@@ -117,7 +117,7 @@ header nav ul li a:hover {
 /* Slider Buttons */
 button.prev, button.next {
     position: absolute;
-    top: 20%;
+    top: 25%;
     width: 40px;
     height: 40px;
     background-color: rgba(48, 43, 99, 0.5);
@@ -276,10 +276,33 @@ footer {
         width: 93%;
 
     }
+    button.prev, button.next {
+        top: 10%;
+    }
     
-    .slide-content {
-        width: 92%;
-        
+}@media screen and (max-width: 600px) {
+    header nav ul li a {
+        font-size: 13px;
+    }
+    .logo {
+        width: 30px;
+    }
+    .about h1 {
+        font-size: 20px;
+        text-align: center;
+        margin-top: 3px;
+    }
+    .about p {
+        font-size: 15px;
+        text-align: center;
+    }
+    .slide img {
+        width: 93%;
+
+    }
+    button.prev, button.next {
+        top: 10%;
     }
     
 }
+    
